@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const xx = 'http://www.baidu.com?'
+    // console.log(xx.length);
+    const str = 'http://www.baidu.com?name=zhangsan&age=18&sex=nan#'
+    let str1 = str.slice(21,-1)
+    // console.log(str1);
+     str1 = str1.replace(/&/g , ',').replace(/=/g , ',')
+    //  console.log(str1);
+    let arr = str1.split(',')
+    console.log(arr);
+    let obj = {}
+    let strxxx = ''
+    arr.forEach((item,index)=>{
+      
+      if ((index % 2 == 0)) {
+        strxxx = item
+        obj[strxxx] = ''
+      }else{
+        obj[strxxx] = item
+      }
+    })
+    console.log(obj);
+
+
+  </script>
+</body>
+</html>
